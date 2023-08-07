@@ -88,7 +88,7 @@
       <!-- sidebar end -->
       <div class="content">
        
-        <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
+        <nav class="navbar align-items-stretch navbar-light flex-md-nowrap container-fluid p-3 p-md-4">
           <form action="#" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex">
             <div class="input-group input-group-seamless ml-3">
               <div class="input-group-prepend">
@@ -96,15 +96,48 @@
                   <i class="fas fa-search"></i>
                 </div> -->
               </div>
-              <div class="input-group flex-nowrap">
+              <div class="input-group flex-nowrap search-input">
                 <span class="input-group-text" id="addon-wrapping">  <i class="fas fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Search..." aria-label="Username" aria-describedby="addon-wrapping">
               </div>
             </div>
           </form>
-          <ul class="navbar-nav border-left flex-row ">
+          <div class=" d-sm-flex navbar-nav-bar">
+      
+           
+            <button class="btn-action mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasActivity" 
+            aria-controls="offcanvasActivity">
+              <span class="f-w-4 text-muted">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                  <path d="M4.38062 21.1709L7.95261 17.5989H19.322C19.8504 17.5989 20.3571 17.389 20.7307 17.0154C21.1043 16.6418 21.3142 16.1351 21.3142 15.6067V6.64185C21.3142 6.11348 21.1043 5.60676 20.7307 5.23316C20.3571 4.85955 19.8504 4.64966 19.322 4.64966H6.3728C5.84444 4.64966 5.33772 4.85955 4.96411 5.23316C4.59051 5.60676 4.38062 6.11348 4.38062 6.64185V21.1709ZM4.38062 22.5793H3.38452V6.64185C3.38452 5.8493 3.69936 5.08922 4.25977 4.52881C4.82018 3.9684 5.58026 3.65356 6.3728 3.65356H19.322C20.1146 3.65356 20.8746 3.9684 21.4351 4.52881C21.9955 5.08922 22.3103 5.8493 22.3103 6.64185V15.6067C22.3103 16.3992 21.9955 17.1593 21.4351 17.7197C20.8746 18.2801 20.1146 18.595 19.322 18.595H8.36499L4.38062 22.5793ZM7.3689 7.63794H18.3259V8.63403H7.3689V7.63794ZM7.3689 10.6262H18.3259V11.6223H7.3689V10.6262ZM7.3689 13.6145H15.3376V14.6106H7.3689V13.6145Z" fill="#222B38" fill-opacity="0.8"/>
+                </svg>
+              </span>
+            </button>
+           
+              <div class="d-none d-sm-flex dropdown mx-1">
+                <button class="btn-action text-muted" type="button" id="notificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="f-w-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                      <path d="M12.1618 23.4293C12.5801 23.4197 12.9815 23.2624 13.2951 22.9854C13.6086 22.7083 13.8141 22.3292 13.8751 21.9153H10.3821C10.4448 22.3405 10.6599 22.7284 10.9873 23.0069C11.3146 23.2854 11.732 23.4356 12.1618 23.4293Z" fill="#222B38" fill-opacity="0.8"/>
+                      <path d="M21.7975 19.1461C21.1571 18.5753 20.5965 17.9208 20.1307 17.2004C19.6221 16.206 19.3174 15.1201 19.2342 14.0063V10.7258C19.2315 10.3274 19.1959 9.92979 19.1279 9.53716C18.6053 9.43268 18.1029 9.24431 17.6404 8.97935C17.8167 9.54702 17.9063 10.1381 17.9061 10.7325V14.0129C17.9875 15.3716 18.3612 16.6967 19.0018 17.8977C19.4602 18.6242 20.0042 19.293 20.6221 19.8899H3.61543C4.23328 19.293 4.77728 18.6242 5.23575 17.8977C5.87631 16.6967 6.25006 15.3716 6.33145 14.0129V10.7258C6.32795 9.9573 6.47609 9.19563 6.76737 8.48443C7.05865 7.77323 7.48735 7.12648 8.02894 6.58119C8.57052 6.03591 9.21434 5.60281 9.92354 5.30669C10.6327 5.01057 11.3934 4.85726 12.1619 4.85552C13.2867 4.85642 14.3862 5.18904 15.3229 5.81177C15.2196 5.43258 15.1616 5.04249 15.1502 4.64966V4.2313C14.4568 3.89021 13.7119 3.66584 12.9455 3.56724V2.73052C12.9455 2.4954 12.8521 2.26991 12.6859 2.10365C12.5196 1.9374 12.2941 1.84399 12.059 1.84399C11.8239 1.84399 11.5984 1.9374 11.4321 2.10365C11.2659 2.26991 11.1725 2.4954 11.1725 2.73052V3.60044C9.45634 3.84253 7.88574 4.6973 6.75062 6.00696C5.6155 7.31661 4.99252 8.99272 4.99668 10.7258V14.0063C4.91351 15.1201 4.60872 16.206 4.1002 17.2004C3.64258 17.9192 3.09095 18.5735 2.45997 19.1461C2.38913 19.2084 2.33236 19.285 2.29343 19.3708C2.2545 19.4567 2.2343 19.5499 2.23418 19.6442V20.5473C2.23418 20.7234 2.30415 20.8923 2.42868 21.0169C2.55322 21.1414 2.72213 21.2114 2.89825 21.2114H21.3592C21.5353 21.2114 21.7042 21.1414 21.8287 21.0169C21.9533 20.8923 22.0232 20.7234 22.0232 20.5473V19.6442C22.0231 19.5499 22.0029 19.4567 21.964 19.3708C21.9251 19.285 21.8683 19.2084 21.7975 19.1461Z" fill="#222B38" fill-opacity="0.8"/>
+                      <path d="M20.1306 7.96997C21.9643 7.96997 23.4509 6.48342 23.4509 4.64966C23.4509 2.8159 21.9643 1.32935 20.1306 1.32935C18.2968 1.32935 16.8103 2.8159 16.8103 4.64966C16.8103 6.48342 18.2968 7.96997 20.1306 7.96997Z" fill="#ED5846"/>
+                      </svg>
+                  </span>
                
-              </ul>
+                </span>
+                </button>
+              
+              </div>
+              <div class="profile-btn-action " >
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <b class="m-3">Albert Flores </b>   
+                  <img src="public/images/profile.png" width="40" height="40" class="rounded-circle">
+                 </a>
+              </div>
+              </div>
+            
+           
+    
         </nav>
       
         <!-- top navbar end -->
@@ -130,7 +163,7 @@
                           <div class="card-body">
                             <div class="d-flex">
                               <div class="flex-shrink-0">
-                                <div class="progress blue">
+                                <div class="progresss blue">
                                   <span class="progress-left">
                                     <span class="progress-bar"></span>
                                   </span>
@@ -155,7 +188,7 @@
                           <div class="card-body">
                             <div class="d-flex">
                               <div class="flex-shrink-0">
-                                <div class="progress blue">
+                                <div class="progresss blue">
                                   <span class="progress-left">
                                     <span class="progress-bar"></span>
                                   </span>
@@ -180,7 +213,7 @@
                           <div class="card-body">
                             <div class="d-flex">
                               <div class="flex-shrink-0">
-                                <div class="progress blue">
+                                <div class="progresss blue">
                                   <span class="progress-left">
                                     <span class="progress-bar"></span>
                                   </span>
@@ -221,6 +254,7 @@
                       </li>
                       <li class="nav-item m-lg-auto" role="presentation">
                         <div class="col-auto d-flex"><select class="form-select form-select-sm select-month me-2">
+                          <option value="0">Monthly</option>
                           <option value="0">January</option>
                           <option value="1">February</option>
                           <option value="2">March</option>
@@ -241,9 +275,12 @@
                     <div class="tab-content" id="pills-tabContent">
                       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
-                        <div class="chart">
-                          <canvas id="myChart" width="400" height="200"></canvas>
+                        <div class="chart-wrapper">
+                          <canvas id="myChart" height="200"></canvas>
                         </div>
+                        <!-- <div class="chart">
+                          <canvas id="myChart" width="400" height="200"></canvas>
+                        </div> -->
                       </div>
                       <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
                       <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
@@ -263,107 +300,94 @@
                       <table class="table table-dashboard mb-0 table-borderless fs--1 border-200">
                         <thead class="bg-light">
                           <tr class="text-900">
-                            <th>Best Selling Products</th>
-                            <th class="text-end">Revenue ($3333)</th>
-                            <th class="pe-x1 text-end" style="width: 8rem">Revenue (%)</th>
+                            <th>Reciever</th>
+                            <th class="text-end">Type</th>
+                            <th class="text-end">Method</th>
+                            <th class="text-end">Amount </th>
+                            <th class="pe-x1 text-end" style="width: 8rem">Date & Time</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr class="border-bottom border-200">
-                            <td>
-                              <div class="d-flex align-items-center position-relative"><img class="rounded-1 border border-200" src="assets/img/products/12.png" width="60" alt="">
-                                <div class="flex-1 ms-3">
-                                  <h6 class="mb-1 fw-semi-bold"><a class="text-dark stretched-link" href="#!">Raven Pro</a></h6>
-                                  <p class="fw-semi-bold mb-0 text-500">Landing</p>
+                            <td data-label="Job Title">
+                              <div class="svg-wrap">
+                              <div class="svg-wraps">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" fill="none">
+                                <g clip-path="url(#clip0_0_4372)">
+                                <path d="M10.7021 11.3799C11.1147 11.3799 11.4492 11.0454 11.4492 10.6328C11.4492 10.2202 11.1147 9.88574 10.7021 9.88574C10.2896 9.88574 9.95508 10.2202 9.95508 10.6328C9.95508 11.0454 10.2896 11.3799 10.7021 11.3799Z" fill="#ED5846" stroke="#ED5846" stroke-width="0.74707" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.72168 11.3799C6.13428 11.3799 6.46875 11.0454 6.46875 10.6328C6.46875 10.2202 6.13428 9.88574 5.72168 9.88574C5.30908 9.88574 4.97461 10.2202 4.97461 10.6328C4.97461 11.0454 5.30908 11.3799 5.72168 11.3799Z" fill="#ED5846" stroke="#ED5846" stroke-width="0.74707" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.48047 2.41504H11.9473L10.9512 7.89355H4.47656L3.48047 2.41504ZM3.48047 2.41504C3.39746 2.08301 2.98242 1.41895 1.98633 1.41895" stroke="#ED5846" stroke-width="0.74707" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10.9512 7.89355H4.47656H3.5954C2.70674 7.89355 2.23535 8.28265 2.23535 8.88965C2.23535 9.49664 2.70674 9.88574 3.5954 9.88574H10.7021" stroke="#ED5846" stroke-width="0.74707" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_0_4372">
+                                <rect width="11.9531" height="11.9531" fill="white" transform="translate(0.990234 0.422852)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
                                 </div>
+                                <a class="text-heading p-1  font-semibold" href="#">
+                                  Robert Fox
+                                </a>
                               </div>
+                             
                             </td>
-                            <td class="align-middle text-end fw-semi-bold">$1311</td>
-                            <td class="align-middle pe-x1">
-                              <div class="d-flex align-items-center">
-                                <div class="progress me-3 rounded-3 bg-200" style="height: 5px;width:80px">
-                                  <div class="progress-bar rounded-pill" role="progressbar" style="width: 39%;" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="fw-semi-bold ms-2">39%</div>
-                              </div>
-                            </td>
+                            <td class="align-middle text-end fw-semi-bold">Transfer</td>
+                            <td class="align-middle text-end fw-semi-bold">Card Transfer</td>
+                            <td class="align-middle text-end date-texting fw-semi-bold">$75.67</td>
+                            <td class="align-middle text-end fw-semi-bold">20 Dec 4.30 PM</td>
+                           
                           </tr>
                           <tr class="border-bottom border-200">
-                            <td>
-                              <div class="d-flex align-items-center position-relative"><img class="rounded-1 border border-200" src="assets/img/products/10.png" width="60" alt="">
-                                <div class="flex-1 ms-3">
-                                  <h6 class="mb-1 fw-semi-bold"><a class="text-dark stretched-link" href="#!">Boots4</a></h6>
-                                  <p class="fw-semi-bold mb-0 text-500">Portfolio</p>
+                            <td data-label="Job Title">
+                              <div class="svg-wrap">
+                              <div class="svg-wraps1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                                  <path d="M10.648 5.46343L11.1844 8.94976C11.3236 9.85485 10.6234 10.6711 9.70763 10.6711H4.22596C3.31023 10.6711 2.60995 9.85485 2.7492 8.94976L3.28555 5.46343C3.39769 4.73454 4.02486 4.19649 4.76232 4.19649H9.17127C9.90874 4.19649 10.5359 4.73455 10.648 5.46343Z" stroke="#A67C62" stroke-width="0.74707" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M7.96289 2.70235C7.96289 2.15222 7.51692 1.70625 6.9668 1.70625C6.41667 1.70625 5.9707 2.15222 5.9707 2.70235" stroke="#A67C62" stroke-width="0.74707" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                                 </div>
+                                <a class="text-heading p-1  font-semibold" href="#">
+                                  Electroman Market
+                                </a>
                               </div>
+                             
                             </td>
-                            <td class="align-middle text-end fw-semi-bold">$860</td>
-                            <td class="align-middle pe-x1">
-                              <div class="d-flex align-items-center">
-                                <div class="progress me-3 rounded-3 bg-200" style="height: 5px;width:80px">
-                                  <div class="progress-bar rounded-pill" role="progressbar" style="width: 26%;" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="fw-semi-bold ms-2">26%</div>
-                              </div>
-                            </td>
+                            <td class="align-middle text-end fw-semi-bold">Transfer</td>
+                            <td class="align-middle text-end fw-semi-bold">Wallet Debit</td>
+                            <td class="align-middle text-end date-texting fw-semi-bold">$75.67</td>
+                            <td class="align-middle text-end fw-semi-bold">20 Dec 4.30 PM</td>
+                           
                           </tr>
                           <tr class="border-bottom border-200">
-                            <td>
-                              <div class="d-flex align-items-center position-relative"><img class="rounded-1 border border-200" src="assets/img/products/11.png" width="60" alt="">
-                                <div class="flex-1 ms-3">
-                                  <h6 class="mb-1 fw-semi-bold"><a class="text-dark stretched-link" href="#!">Falcon</a></h6>
-                                  <p class="fw-semi-bold mb-0 text-500">Admin</p>
+                            <td data-label="Job Title">
+                              <div class="svg-wrap">
+                              <div class="svg-wraps2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+                                  <g clip-path="url(#clip0_0_4394)">
+                                    <path d="M11.1788 7.26707C11.401 6.55162 11.9015 3.90576 8.22489 1.54535C8.09541 1.4625 7.92546 1.48427 7.82274 1.59494C7.71941 1.70561 7.71505 1.87253 7.81216 1.98864C7.8271 2.00618 9.18171 3.6566 8.69988 5.54166C7.86694 4.96834 4.55451 2.34304 4.55451 2.34304L6.46875 5.47949L2.91354 3.18851C2.91354 3.18851 5.42666 6.27404 6.96491 7.43459C6.22037 7.70189 4.60244 7.98493 2.46595 6.65685C2.34518 6.58126 2.18644 6.59577 2.08185 6.69374C1.97851 6.7899 1.9561 6.94351 2.02894 7.06386C2.10053 7.1824 3.81308 9.96191 7.43429 9.96191C8.42783 9.96191 9.00865 9.67888 9.47554 9.45209C9.76252 9.313 9.98912 9.20233 10.2363 9.20233C10.8519 9.20233 11.2559 9.81375 11.2597 9.81919C11.317 9.90809 11.4172 9.96191 11.5243 9.96191C11.5323 9.96191 11.5411 9.96131 11.5498 9.9607C11.6662 9.95163 11.767 9.88088 11.8119 9.77625C12.2563 8.74391 11.4906 7.65049 11.1788 7.26707Z" stroke="#95AFB7" stroke-width="0.74707" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </g>
+                                  <defs>
+                                    <clipPath id="clip0_0_4394">
+                                      <rect width="11.9531" height="11.9531" fill="white" transform="translate(0.990234 0.000976562)"/>
+                                    </clipPath>
+                                  </defs>
+                                </svg>
                                 </div>
+                                <a class="text-heading p-1  font-semibold" href="#">
+                                  Tesco Market
+                                </a>
                               </div>
+                             
                             </td>
-                            <td class="align-middle text-end fw-semi-bold">$539</td>
-                            <td class="align-middle pe-x1">
-                              <div class="d-flex align-items-center">
-                                <div class="progress me-3 rounded-3 bg-200" style="height: 5px;width:80px">
-                                  <div class="progress-bar rounded-pill" role="progressbar" style="width: 16%;" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="fw-semi-bold ms-2">16%</div>
-                              </div>
-                            </td>
+                            <td class="align-middle text-end fw-semi-bold">Transfer</td>
+                            <td class="align-middle text-end fw-semi-bold">Bank transfer</td>
+                            <td class="align-middle text-end date-texting fw-semi-bold">$75.67</td>
+                            <td class="align-middle text-end fw-semi-bold">20 Dec 4.30 PM</td>
+                           
                           </tr>
-                          <tr class="border-bottom border-200">
-                            <td>
-                              <div class="d-flex align-items-center position-relative"><img class="rounded-1 border border-200" src="assets/img/products/14.png" width="60" alt="">
-                                <div class="flex-1 ms-3">
-                                  <h6 class="mb-1 fw-semi-bold"><a class="text-dark stretched-link" href="#!">Slick</a></h6>
-                                  <p class="fw-semi-bold mb-0 text-500">Builder</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="align-middle text-end fw-semi-bold">$343</td>
-                            <td class="align-middle pe-x1">
-                              <div class="d-flex align-items-center">
-                                <div class="progress me-3 rounded-3 bg-200" style="height: 5px;width:80px">
-                                  <div class="progress-bar rounded-pill" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="fw-semi-bold ms-2">10%</div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="d-flex align-items-center position-relative"><img class="rounded-1 border border-200" src="assets/img/products/13.png" width="60" alt="">
-                                <div class="flex-1 ms-3">
-                                  <h6 class="mb-1 fw-semi-bold"><a class="text-dark stretched-link" href="#!">Reign Pro</a></h6>
-                                  <p class="fw-semi-bold mb-0 text-500">Agency</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="align-middle text-end fw-semi-bold">$280</td>
-                            <td class="align-middle pe-x1">
-                              <div class="d-flex align-items-center">
-                                <div class="progress me-3 rounded-3 bg-200" style="height: 5px;width:80px">
-                                  <div class="progress-bar rounded-pill" role="progressbar" style="width: 8%;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="fw-semi-bold ms-2">8%</div>
-                              </div>
-                            </td>
-                          </tr>
+                        
+                       
                         </tbody>
                       </table>
                     </div>
@@ -409,12 +433,48 @@
 <!-- Carousel wrapper -->
                       </div>
                       <div class="col-lg-4">
-                        <div class="card shadow-sm">
-                          <div class="card-body">
-                            <canvas id="lineChart"></canvas>
-                          </div>
+                        <div class="current-balance">
+                        
+                            <div class="flex-grow-1 pt-1 text-end">
+                              <div class="fw-bolder text-orange ">$12,500</div>
+                             <span> Current Balance</span>
+                             </div>
+                            <div class="flex-grow-1 pt-2 text-end">
+                              <div class="fw-bolder text-darker ">$12,500</div>
+                              Income
+                             </div>
+                            <div class="flex-grow-1 pt-2  text-end">
+                              <div class="fw-bolder text-grays ">$12,500</div>
+                              Outcome
+                             </div>
+                          
                         </div>
                       </div>
+                    </div>
+
+                    <div class="row mt-3">
+                     
+
+                    <div class="col-md-8 pt-1">
+                      <div class="progress">
+                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="d-flex mt-4 justify-content-between">
+                        <p>Weekly payment limit</p>
+                        <div class="fw-bolder"> $4000</div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="form-check form-switch form-switch-progress">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                      </div>
+                       <div class="form-switch-text d-flex mt-3 pt-1 text-end">
+                       <p class="text-end-card"> Deacivate Card</p>
+                       </div>
+
+                    </div>
                     </div>
                   </div>
 
@@ -424,26 +484,93 @@
                   </div>
 
                   
-                  <div class="card-body">
-                    <div class="row g-4">
-                      <div class="col-lg-6">
-                        <div class="card shadow-sm">
-                          <div class="card-body">
-                            <canvas id="myChart"></canvas>
-                          </div>
-                        </div>
+                  <div class="m-3">Dec 16, 2021</div>
+                  <div class="transaction-card d-flex justify-content-between p-3">
+                   <div class="date-card-time ">
+                    10:00 AM
+                   </div>
+
+                    <div class="d-flex">
+                      <div class="flex-shrink-0 progress-border">
+                         <div class="progress-left-border"></div>
                       </div>
-                      <div class="col-lg-6">
-                        <div class="card shadow-sm">
-                          <div class="card-body">
-                            <canvas id="lineChart"></canvas>
-                          </div>
-                        </div>
+                      <div class="flex-grow-1 ms-3">
+                      <h6>Agro Fram</h6>
+                      <p>$500</p>
                       </div>
                     </div>
+
+                     <div class="money-btn-orange money-btn">
+                      Send Money
+                     </div>
+
                   </div>
 
-                  
+                  <div class="transaction-card d-flex justify-content-between p-3">
+                    <div class="date-card-time ">
+                     10:00 AM
+                    </div>
+ 
+                     <div class="d-flex">
+                       <div class="flex-shrink-0 progress-border">
+                          <div class="progress-left-border2"></div>
+                       </div>
+                       <div class="flex-grow-1 ms-3">
+                       <h6>Agro Fram</h6>
+                       <p>$500</p>
+                       </div>
+                     </div>
+ 
+                      <div class="money-btn-darker money-btn">
+                       Send Money
+                      </div>
+ 
+                   </div>
+                   <hr class="solid ">
+
+                   <div class="m-3">Dec 16, 2021</div>
+                  <div class="transaction-card d-flex justify-content-between p-3">
+                   <div class="date-card-time ">
+                    10:00 AM
+                   </div>
+
+                    <div class="d-flex">
+                      <div class="flex-shrink-0 progress-border">
+                         <div class="progress-left-border"></div>
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                      <h6>Agro Fram</h6>
+                      <p>$500</p>
+                      </div>
+                    </div>
+
+                     <div class="money-btn-orange money-btn">
+                      Send Money
+                     </div>
+
+                  </div>
+
+                  <div class="transaction-card d-flex justify-content-between p-3">
+                    <div class="date-card-time ">
+                     10:00 AM
+                    </div>
+ 
+                     <div class="d-flex">
+                       <div class="flex-shrink-0 progress-border">
+                          <div class="progress-left-border2"></div>
+                       </div>
+                       <div class="flex-grow-1 ms-3">
+                       <h6>Agro Fram</h6>
+                       <p>$500</p>
+                       </div>
+                     </div>
+ 
+                      <div class="money-btn-darker money-btn">
+                       Send Money
+                      </div>
+ 
+                   </div>
+               
                 </div>
               </div>
 
@@ -488,49 +615,116 @@
 
       </div>
     </div>
-    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.bundle.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>
     <script src="public/js/main.js"></script>
     <script>
-      const ctx = document.getElementById('myChart');
-      const lc = document.getElementById('lineChart');
-      const myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-          datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var gradient = ctx.createLinearGradient(0, 0, 1, 10);
+  gradient.addColorStop(0, "rgba(25, 15, 0, 0.1)");
+  gradient.addColorStop(1, "rgba(255, 165, 0, 0.1)");
+  // Line chart
+  new Chart(document.getElementById("myChart"), {
+    type: "line",
+    data: {
+      labels: [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      datasets: [
+        {
+          label: "Sales ($)",
+          fill: true,
+          backgroundColor: gradient,
+          borderColor: "#ED5846", 
+          tension: 0.4,
+          data: [
+            5115,
+            1562,
+            2584,
+            1892,
+            5987,
+            6923,
+            9566,
+            8448,
+            6805,
+            8438,
+            9917,
+            3327
+          ]
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      },
+      tooltips: {
+        intersect: false
+      },
+      hover: {
+        intersect: true
+      },
+      plugins: {
+        filler: {
+          propagate: false
+        }
+      },
+      scales: {
+        xAxes: [
+          {
+            reverse: true,
+            gridLines: {
+              color: "rgba(122,0,1,0.01)"
+            },
+            ticks: {
+              fontColor: "#000",
+              fontFamily: "Poppins"
+            },
+            grid: {
+              color: "white",
+              borderColor: "white",
+              tickColor: "white"
             }
           }
-        }
-      });
-  
-
+        ],
+        yAxes: [
+          {
+            ticks: {
+              stepSize: 1000,
+              fontColor: "#010",
+              fontFamily: "Poppins"
+            },
+            borderDash: [3, 3],
+            gridLines: {
+              color: "rgba(221,0,0,0.01)"
+            },
+            grid: {
+              color: "white",
+              borderColor: "white",
+              tickColor: "white"
+            }
+          }
+        ]
+      }
+    }
+  });
+});
 
 
 
